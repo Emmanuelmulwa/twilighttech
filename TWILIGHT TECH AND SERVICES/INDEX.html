@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TWILIGHT TECH & SERVICES - IT support, cybersecurity, networking, design, interior and technical solutions">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Tech & Services</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body { line-height: 1.6; color: #222;
+
+
+}
+
+
+        /* HEADER */
+        .site-header {
+            background: #0b1c2d;
+            color: #fff;
+            text-align: center;
+            padding: 25px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+/* Logo styling */
+.logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* makes it oval/round */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto; /* centers it */
+    background: #fff;
+    padding: 5px;
+
+    /* Animation */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional hover effect */
+.logo:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(11,28,45,0.75), rgba(11,28,45,0.75)),
+            url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 110px 30px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #1e90ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0b63c7;
+        }
+
+        section {
+            padding: 70px 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #0b1c2d;
+        }
+
+        /* ABOUT & MISSION */
+        .about, .mission {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: #f4f6f8;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 22px;
+        }
+
+        .service-card h3 {
+            color: #0b1c2d;
+            margin-bottom: 10px;
+        }
+
+        /* WHY US */
+        .why-us {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .why-us ul {
+            list-style: none;
+        }
+
+        .why-us li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .why-us li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: green;
+        }
+
+        /* VALUES */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .value {
+            background: #f4f6f8;
+            padding: 22px;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b1c2d;
+            color: #fff;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: #25d366;
+            color: #fff;
+            padding: 16px 18px;
+            border-radius: 50%;
+            font-size: 22px;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp:hover {
+            background: #1ebe5d;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 { font-size: 30px; }
+            nav a { margin: 8px; display: inline-block; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <img src="logo.png" alt="TTSL Logo" class="logo">
+    <h1>Twilight Tech & Services</h1>
+    <p>Innovative Technology. Reliable Solutions.</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#mission">Mission</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Smart, Practical Technology Solutions</h2>
+    <p>
+        We help businesses and individuals grow, secure their systems,
+        and stay ahead in a digital world through dependable and innovative IT solutions.
+    </p>
+    <a href="#contact" class="btn">Get In Touch</a>
+</section>
+
+<section id="about">
+    <div class="section-title"><h2>Who We Are</h2></div>
+    <div class="about">
+        <p>
+            Twilight Tech & Services is a technology solutions company committed to providing
+            high-quality IT services, digital solutions, and technical support.
+        </p>
+        <p>Our team believes technology should simplify life—not complicate it.</p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-title"><h2>Our Services</h2></div>
+
+    <div class="services">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5" alt="IT Support & Maintenance">
+            <div class="service-card-content">
+                <h3>IT Support & Maintenance</h3>
+                <ul>
+                    <li>Computer repair and troubleshooting</li>
+                    <li>Network setup and maintenance</li>
+                    <li>System upgrades and optimization</li>
+                    <li>Hardware & software installation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <div class="service-card-content">
+                <h3>Software & Digital Solutions</h3>
+                <ul>
+                    <li>Website development & maintenance</li>
+                    <li>Business software support</li>
+                    <li>System automation</li>
+                    <li>Data management & backups</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+            <div class="service-card-content">
+                <h3>Cybersecurity Solutions</h3>
+                <ul>
+                    <li>Security assessments</li>
+                    <li>Antivirus & firewall setup</li>
+                    <li>Data protection</li>
+                    <li>User security awareness</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Technical Department">
+            <div class="service-card-content">
+                <h3>Technical Department</h3>
+                <ul>
+                    <li>Building & construction</li>
+                    <li>Electrical works</li>
+                    <li>LAN & WAN</li>
+                    <li>PABX & structured cabling</li>
+                    <li>Wireless internet</li>
+                    <li>Automation & PLC</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+            <div class="service-card-content">
+                <h3>Designing & Branding</h3>
+                <ul>
+                    <li>Graphic design</li>
+                    <li>Branding & signage</li>
+                    <li>Printing services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+            <div class="service-card-content">
+                <h3>Interior Designing</h3>
+                <ul>
+                    <li>Landscaping</li>
+                    <li>Decoration</li>
+                    <li>Furnishing</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="mission">
+    <div class="section-title"><h2>Why Choose Us</h2></div>
+    <div class="why-us">
+        <ul>
+            <li>Experienced and skilled professionals</li>
+            <li>Reliable and timely service delivery</li>
+            <li>Affordable and transparent pricing</li>
+            <li>Customer-first approach</li>
+            <li>Modern, scalable solutions</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="section-title"><h2>Our Mission & Vision</h2></div>
+    <div class="mission">
+        <p><strong>Mission:</strong> To empower businesses and individuals with dependable,
+            innovative, and secure technology solutions.</p>
+        <p><strong>Vision:</strong> To be a trusted technology partner recognized for excellence.</p>
+    </div>
+</section>
+
+<section>
+    <div class="section-title"><h2>Core Values</h2></div>
+    <div class="values">
+        <div class="value"><strong>Integrity</strong><p>Honest and transparent service</p></div>
+        <div class="value"><strong>Innovation</strong><p>Embracing modern technology</p></div>
+        <div class="value"><strong>Reliability</strong><p>Solutions you can depend on</p></div>
+        <div class="value"><strong>Customer Focus</strong><p>Your success comes first</p></div>
+    </div>
+</section>
+
+<footer id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Location: Kenda Hse 4th Floor</p>
+    <p>📞 Phone: 0713645948 / 0720903052</p>
+    <p>📧 Email: twilighttechandservicesltd@gmail.com</p>
+    <p>
+        © 2026 Twilight Tech & Services<br><br>
+        <strong>Website Designed & Maintained By:</strong><br>
+        Emmanuel Mulwa<br>
+        📞 0743122953<br>
+        📧 mulwaemmanuel890@gmail.com
+    </p>
+</footer>
+
+<a href="https://wa.me/254713645948" class="whatsapp">💬</a>
+
+</body>
+</html>
+
+       
